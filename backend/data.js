@@ -1,7 +1,23 @@
+import bcrypt from 'bcryptjs';
+
 const data = {
-    products:[
+    users: [
         {
-            _id:'1',
+            name: 'Slavko',
+            email: 'slavko.ramljak@fsre.sum.ba',
+            password: bcrypt.hashSync('1234', 8),
+            isAdmin: true,
+        },
+        {
+            name: 'Frano',
+            email: 'frano.tomas@fsre.sum.ba',
+            password: bcrypt.hashSync('1234', 8),
+            isAdmin: false,
+        },
+    ],
+
+    products: [
+        {
             name:'Grand Theft Auto V',
             genre:'action-adventure',
             image:'/images/igrica-1.jpg',
@@ -10,7 +26,6 @@ const data = {
             year:'2013',
         },
         {
-            _id:'2',
             name:'Grand Theft Auto IV',
             genre:'action-adventure',
             image:'/images/igrica-2.jpg',
@@ -19,7 +34,6 @@ const data = {
             year:'2008',
         },
         {
-            _id:'3',
             name:'Max Payne 3',
             genre:'action-adventure',
             image:'/images/igrica-3.jpg',
@@ -28,7 +42,6 @@ const data = {
             year:'2012',
         },
         {
-            _id:'4',
             name:'Far Cry 3',
             genre:'first-person shooter',
             image:'/images/igrica-4.jpg',
@@ -37,7 +50,6 @@ const data = {
             year:'2012',
         },
         {
-            _id:'5',
             name:'Far Cry 4',
             genre:'first-person shooter',
             image:'/images/igrica-5.jpg',
@@ -46,7 +58,6 @@ const data = {
             year:'2014',
         },
         {
-            _id:'6',
             name:'FIFA 21',
             genre:'sports',
             image:'/images/igrica-6.jpg',
@@ -55,7 +66,6 @@ const data = {
             year:'2020',
         },
         {
-            _id:'7',
             name:'Cyberpunk 2077',
             genre:'action role-playing',
             image:'/images/igrica-7.jpg',
@@ -64,7 +74,6 @@ const data = {
             year:'2020',
         },
         {
-            _id:'8',
             name:'Red Dead Redemption 2',
             genre:'action-adventure',
             image:'/images/igrica-8.jpg',
